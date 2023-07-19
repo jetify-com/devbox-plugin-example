@@ -1,0 +1,14 @@
+{
+  "name": "my-custom-name-github-plugin",
+  "version": "0.0.1",
+  "readme": "Example custom github plugin-with-custom-name",
+  "env": {
+    "MY_ENV_VAR_CUSTOM": "I AM SET TO CUSTOM (new value)"
+  },
+  "create_files": {
+    "{{ .Virtenv }}/empty-dir": "",
+    "{{ .Virtenv }}/some-file": "files/some-file.txt",
+    "{{ .DevboxDir }}/some-file.txt": "files/some-file.txt",
+    "{{ .Virtenv }}/process-compose.yaml": "files/process-compose.yaml"
+  }
+}
